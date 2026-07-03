@@ -43,8 +43,8 @@ public class Methods {
     
     class Ebook extends Methods{
         String fileSize;
-        public void playList(){
-            System.out.println("Title: " + title + ", FileSize: " + fileSize + ", Authore: " + author + ", Pages: " + pages );
+        public Ebook(String f, String t, String a, int p){
+            fileSize = "90 GB";
         }
 }
 
