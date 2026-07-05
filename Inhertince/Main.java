@@ -2,11 +2,11 @@ package Inhertince;
 
 public class Main {
     public static void main(String[] args){
-        Animal mAnimal = new Animal("Cat", 5);
-        Dog mDog = new Dog("Buddy", 3);
-
-        mAnimal.sound();
-        mDog.sound();
+        Animal S1 = new Dog("Cat", 5);
+        Animal S2 = new Cat("bezy", 4);
+        S1.sound();
+        S2.sound();
+     
     }
     
 }

@@ -8,7 +8,7 @@ public class Animal {
         this.age = age;
     }
     public void sound(){
-        System.out.println("Name: " + name + ", Age: " + age);
+        System.out.println("Animal suond ");
     }
     
 
