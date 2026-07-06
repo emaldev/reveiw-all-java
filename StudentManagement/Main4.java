@@ -12,6 +12,9 @@ public class Main4 {
         Scanner input = new Scanner(System.in);
         String FileName = input.nextLine();
         AddFile(FileName);
+        
+
+        
 
 
           
@@ -38,6 +41,7 @@ public class Main4 {
 
             Studen s = new Studen(id, name, age);
             System.out.println(s);
+            WriterFile(FileName, input, s);
         }
              
     }
@@ -57,6 +61,19 @@ public class Main4 {
 
           
        
+    }
+
+    public static void WriterFile(String fileName, Scanner input,Studen s){
+        try(FileWriter myFileWriter = new FileWriter(fileName, true)){
+            
+                
+                myFileWriter.write(s  + "\n");
+
+            
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
 }
