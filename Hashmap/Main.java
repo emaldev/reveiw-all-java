@@ -1,5 +1,8 @@
 package Hashmap;
 import java.util.HashMap;
+import java.util.*;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args){
         HashMap<String , Student> name = new HashMap<String , Student>();
@@ -21,6 +24,11 @@ public class Main {
          s.age = 25;
 
          System.out.println(name.get("2"));
+
+         for(Map.Entry<String, Student> entry : name.entrySet()){
+            System.out.println("ID: " + entry.getKey());
+            System.out.println(entry.getValue());
+         }
        
 
     }
