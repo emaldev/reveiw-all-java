@@ -1,14 +1,28 @@
-
+import java.io.IOException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-      String name = "Ali";
-      int age = 18; 
-      double height = 1.78;
+     try{
+       Scanner input = new Scanner(System.in);
+      int a = input.nextInt();
+      int b = input.nextInt();
+      double divide = (double) a / b;
+      
+      System.out.println(divide);
+     }catch(ArithmeticException e){
 
-      System.out.println("Name : " + name + ", Age: " + age + ", Height: " + height);
+        System.out.println("Connot divide by zero!");
+        
+        e.printStackTrace();
+      }catch(InputMismatchException e){
+        System.out.println("Invalid input!");
+      }
+       finally{
+      System.out.println("finish program.");
+     }
+    
+    } 
+} 
 
-
-
-    }  
-}
