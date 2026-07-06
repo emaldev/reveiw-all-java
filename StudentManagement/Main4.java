@@ -12,7 +12,7 @@ public class Main4 {
         Scanner input = new Scanner(System.in);
         String FileName = input.nextLine();
         AddFile(FileName);
-        
+            
 
         
 
@@ -41,7 +41,9 @@ public class Main4 {
 
             Studen s = new Studen(id, name, age);
             System.out.println(s);
-            WriterFile(FileName, input, s);
+            WriterFile(FileName, s);
+            RederFile(FileName);  
+            input.close();
         }
              
     }
@@ -52,7 +54,7 @@ public class Main4 {
             if(myFile.createNewFile()){
                 System.out.println("Student added successfully.");
             }else{
-                System.out.println("Student file not added successfully.");
+                System.out.println("ّFile created successfully.");
             }
             
             }catch(IOException e){
@@ -63,7 +65,7 @@ public class Main4 {
        
     }
 
-    public static void WriterFile(String fileName, Scanner input,Studen s){
+    public static void WriterFile(String fileName,Studen s){
         try(FileWriter myFileWriter = new FileWriter(fileName, true)){
             
                 
@@ -71,6 +73,20 @@ public class Main4 {
 
             
 
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void RederFile(String fileName){
+        try{
+            File myFile = new File(fileName);
+            Scanner scan = new Scanner(myFile);
+            while(scan.hasNextLine()){
+                String note = scan.nextLine();
+                System.out.println(note);
+            }
+            
         }catch(IOException e){
             e.printStackTrace();
         }
