@@ -1,13 +1,18 @@
 public class Inhe {
-    protected String brand = "BMW";
-    public void start(){
-        System.out.println("The car is " + brand + "Started ");
-    }
-    
-}
+  public String name; 
+  public String id;
 
-class car extends Inhe{
-    public string model(){
-        System.out.println("")
-    }
+  public Inhe(String name, String id){
+    this.name = name;
+    this.id = id;
+
+  }
+  @Override 
+  public boolean equals(Object obj){
+    if(this == obj) return true;
+    if(obj == null || getClass() != obj.getClass()) return false;
+    Inhe h = (Inhe) obj;
+    return id.equals(h.id);
+  }
+   
 }
