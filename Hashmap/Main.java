@@ -17,6 +17,10 @@ public class Main {
         name.get("3");
         System.out.println(  name.containsKey("2") );
          System.out.println(name.containsValue(new Student("Mohammad", "34", 21)));
+         Student s = name.get("2");
+         s.age = 25;
+
+         System.out.println(name.get("2"));
        
 
     }
